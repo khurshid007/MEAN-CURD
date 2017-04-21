@@ -1,0 +1,26 @@
+<div class="panel panel-default " style="width: 100%;height: 100%">
+
+  <div class="panel-heading">
+
+    <label  ng-if="validLogin()">Welcome : <b> {{user.id}}</b></label>
+</div>
+<div class="panel-body" >
+<div class="row" >
+<div class="col-sm-6 pull-right">
+<div class="btn btn-sm btn-default">
+<input type="file" name="" value="Select File" file-model="myFile" /></div>
+   </div>
+   <div><input type="button" name="" value="Upload File" ng-click="uploadFile()"></div>
+    <div class="msgContainer pull-right">
+            <div data-ng-show="isLoading" class="pull-left">
+                <img src="Content/images/spinner.gif" style="width: 16px; height: 16px;" />
+            </div>
+            <div class="alert alert-success" data-ng-show="successMessage">
+                <i class="glyphicon glyphicon-thumbs-up icon-white"></i>&nbsp;&nbsp;{{successMessage}}
+            </div>
+            <div class="alert alert-danger" data-ng-show="errorMessage">
+                <i class="glyphicon glyphicon-thumbs-down icon-white"></i>&nbsp;&nbsp;Error: {{ errorMessage }}
+            </div>
+        </div>
+</div>
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="row col-sm-4 col-sm-offset-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">Login</div>
+        <div class="panel-body">
+            <form class="form-horizontal" action="/home" method="post">
+
+                <div class="form-group">
+                    <label class="label-control col-sm-4">User Name</label>
+
+                    <div class="col-sm-8">
+                        <input type="text" name="UserName" value=" " ng-model="user.name" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label-control col-sm-4">password</label>
+
+                    <div class="col-sm-8">
+                        <input type="password" name="password" ng-model="user.password" class="form-control" />
+                    </div>
+
+                </div>
+        </div>
+        <div class="panel-footer">
+         
+                        <input type="button" ng-click="login(user.name,user.password)"  class="btn btn-primary btn-md" value="Login"/>
+             
+<span class="errorMessage" ng-if="errorMessage">{{errorMessage}}</span>
+        </div>
+</form>
+</div>
+</div>
